@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadetpx4239-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadetpx4239-tenant-component
+    app.kubernetes.io/part-of: loadetpx4239-tenant-app
+  name: loadetpx4239-tenant-component
+  namespace: loadetpx4239-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: loadetpx4239-tenant-component
+status:
+  loadBalancer: {}
